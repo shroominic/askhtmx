@@ -1,13 +1,13 @@
 [project]
 name = "askhtmx"
 version = "0.1.0"
-description = "Add your description here"
+description = "HTMX Chatbot"
 authors = [
     { name = "Shroominic", email = "db2002dominic@gmail.com" }
 ]
 dependencies = [
-    "funcchain>=0.1.3",
-    "typer>=0.9.0",
+    "typer>=0.9",
+    "funcchain>=0.1.5",
 ]
 readme = "README.md"
 requires-python = ">= 3.11"
