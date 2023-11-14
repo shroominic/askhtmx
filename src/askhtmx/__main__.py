@@ -2,7 +2,7 @@ from typing import Annotated
 
 import typer
 from funcchain import settings
-from .ask import ask_htmx
+from .chat import chat_htmx, chat_loop
 
 
 app = typer.Typer()
@@ -15,9 +15,19 @@ def ask(
     question: Annotated[str, typer.Argument(help="Question to ask.")],
 ) -> None:
     """
-    Ask a question about the codebase or relevant libraries.
+    Ask a question about htmx or relevant things.
     """
-    print(ask_htmx(question))
+    print(chat_htmx(question))
+
+
+@app.command()
+def chat() -> None:
+    """
+    Chat with the htmx expert.
+    """
+    print("Welcome to the htmx expert chat. Ask me anything about htmx.")
+    print("Type 'exit' to exit, 'clear' to clear the history.")
+    chat_loop()
 
 
 if __name__ == "__main__":
